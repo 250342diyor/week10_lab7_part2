@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int powofnum(int a, int b) {
+    if (b == 0) {
+        return 1;
+    }
+    return a * powofnum(a, b - 1);
+}
+int main() {
+    int a,b;
+    cout << "Enter numbers: ";
+    cin >> a>>b;
+    cout<<"result: " << powofnum(a,b) << endl;
+}
