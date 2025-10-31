@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int prodofdigit(int n) {
+    if (n==0)
+        return 1;
+    else {
+        return (n%10) * prodofdigit(n/10);
+    }
+}
+int main() {
+    int n;
+    cin>>n;
+    cout<<prodofdigit(n);
+}
