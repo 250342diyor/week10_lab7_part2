@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int reverseofnum(int n, int rev = 0) {
+    if (n == 0)
+        return rev;
+    return reverseofnum(n / 10, rev * 10 + n % 10);
+}
+
+bool ispalindrome(int n) {
+    if (n == reverseofnum(n))
+        return true;
+    else
+        return false;
+}
+int main() {
+    int n;
+    cin >> n;
+    if (ispalindrome(n))
+        cout << "true";
+    else
+        cout << "false";
+}
