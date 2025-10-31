@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int evendigits(int n) {
+    if (n == 0)
+        return 0;
+
+    int temp = n % 10;
+    if (temp % 2 == 0)
+        return 1 + evendigits(n / 10);
+    else
+        return evendigits(n / 10);
+}
+
+int main() {
+    int n;
+    cin >> n;
+    cout << evendigits(n);
+}
